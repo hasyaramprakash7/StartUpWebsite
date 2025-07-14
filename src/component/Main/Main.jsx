@@ -7,35 +7,40 @@ import Welcome from '../Welcome';
 import Resources from '../Resources';
 import Contact from '../Contact';
 import Footer from '../Footer';
+import SearchInversHero from '../../SearchInversHero';
 
-function Main () {
+function Main() {
   return (
     <div className="min-h-screen bg-white custom-scrollbar">
-      {/* Navigation */}
       <NavBar />
-
-      {/* Hero Section */}
-      <Home />
-
-      {/* Practice Areas Section */}
-      <Entry />
-
-      {/* Why Choose Us Section */}
-      <MainHome />
-
-      {/* Testimonials Section */}
-      <Welcome />
-
-      {/* Resources Section */}
-      <Resources />
-
-      {/* Contact Section */}
-      <Contact />
-
-      {/* Footer */}
-      <Footer />
-
+      <SearchInversHero />
     </div>
+    // <div className="min-h-screen bg-white custom-scrollbar">
+    //   Navigation
+    //   <NavBar />
+
+    //   {/* Hero Section */}
+    //   <Home />
+
+    //   {/* Practice Areas Section */}
+    //   <Entry />
+
+    //   {/* Why Choose Us Section */}
+    //   <MainHome />
+
+    //   {/* Testimonials Section */}
+    //   <Welcome />
+
+    //   {/* Resources Section */}
+    //   <Resources />
+
+    //   {/* Contact Section */}
+    //   <Contact />
+
+    //   {/* Footer */}
+    //   <Footer />
+
+    // </div>
   );
 }
 

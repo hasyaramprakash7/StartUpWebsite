@@ -3,22 +3,22 @@ import '../App.css';
 const Welcome = () => {
   const testimonials = [
     {
-      name: 'Sarah Johnson',
-      role: 'CEO, Tech Innovations',
-      image: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&auto=format&fit=crop&w=200&q=80',
-      text: "The legal expertise provided by this firm has been instrumental in our company's growth.",
-    },
-    {
-      name: 'Michael Chen',
-      role: 'Founder, StartUp Co',
+      name: 'Rajesh Kumar',
+      role: 'Wholesale Director, Global Traders',
       image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-1.2.1&auto=format&fit=crop&w=200&q=80',
-      text: 'Their innovative approach to legal challenges sets them apart from traditional law firms.',
+      text: "Search Invers transformed our bulk sourcing process. We now connect with suppliers globally in minutes, not weeks.",
     },
     {
-      name: 'Emily Rodriguez',
-      role: 'Director, Global Corp',
-      image: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-1.2.1&auto=format&fit=crop&w=200&q=80',
-      text: 'Exceptional service and attention to detail in handling our international legal matters.',
+      name: 'Maria Santos',
+      role: 'Retail Chain Owner',
+      image: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&auto=format&fit=crop&w=200&q=80',
+      text: 'The real-time tracking feature gives us complete visibility over our inventory. Our customers love the transparency.',
+    },
+    {
+      name: 'Ahmed Hassan',
+      role: 'Logistics Manager, FastShip',
+      image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&auto=format&fit=crop&w=200&q=80',
+      text: 'As a delivery partner, Search Invers streamlined our operations across multiple cities. Efficiency increased by 40%.',
     },
   ];
 
@@ -36,9 +36,9 @@ const Welcome = () => {
       <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-4">Client Success Stories</h2>
+            <h2 className="text-4xl font-bold mb-4">Success Stories</h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
-              Read what our clients say about their experience working with us
+              See how Search Invers is transforming global trade for businesses worldwide
             </p>
           </div>
 

@@ -1,16 +1,16 @@
-import React, {useEffect, useRef, useState} from 'react';
-import {ChevronRight, ArrowRight} from 'lucide-react';
+import React, { useEffect, useRef, useState } from 'react';
+import { ChevronRight, ArrowRight } from 'lucide-react';
 import '../../App.css';
-import {homeData} from './home';
+import { homeData } from './home';
 const HomePage = () => {
-  const [isVideoLoaded, setIsVideoLoaded] = useState (false);
+  const [isVideoLoaded, setIsVideoLoaded] = useState(false);
 
-  const videoRef = useRef (HTMLVideoElement > null);
+  const videoRef = useRef(HTMLVideoElement > null);
 
-  useEffect (() => {
+  useEffect(() => {
     if (videoRef.current) {
-      videoRef.current.play ().catch (() => {
-        console.log ('Video autoplay failed');
+      videoRef.current.play().catch(() => {
+        console.log('Video autoplay failed');
       });
     }
   }, []);
@@ -25,7 +25,7 @@ const HomePage = () => {
             muted
             loop
             playsInline
-            onLoadedData={() => setIsVideoLoaded (true)}
+            onLoadedData={() => setIsVideoLoaded(true)}
             className={`w-full h-full object-cover transition-opacity duration-1000 ${isVideoLoaded ? 'opacity-100' : 'opacity-0'}`}
           >
             <source
@@ -66,11 +66,11 @@ const HomePage = () => {
         <div className="absolute bottom-0 left-0 right-0 transform translate-y-1/2 shadow pt-20">
           <div className="container mx-auto px-4">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-              {homeData.map ((stat, index) => (
+              {homeData.map((stat, index) => (
                 <div
                   key={index}
                   className="bg-white p-6 rounded-xl shadow-xl card-hover animate-fade-in"
-                  style={{animationDelay: `${index * 0.1}s`}}
+                  style={{ animationDelay: `${index * 0.1}s` }}
                 >
                   <h3 className="text-4xl font-bold text-blue-600 mb-2">
                     {stat.number}

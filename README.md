@@ -1,8 +1,5 @@
-# React + Vite
+# 💼 Search Invers – Powering Global Wholesale & Retail Trade
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Search Invers is a next-gen B2B & B2C e-commerce platform that connects wholesalers, retailers, and delivery agents across cities, states, and countries.
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+From bulk product sourcing to real-time order tracking, we simplify global trade for businesses of all sizes — all in one powerful app.
