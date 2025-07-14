@@ -10,21 +10,23 @@ import {
   Mail,
   Phone,
   YoutubeIcon,
-} from "lucide-react"; // Added Lucide icons for header/footer
+} from "lucide-react";
+
 import Entry from "./component/Entry";
 import MainHome from "./component/MainHome";
 import Footer from "./component/Footer";
-
-import image from "./Images/hii.jpg";
 import Contact from "./component/Contact";
 import ProjectOverviewWithIcons from "./ProjectOverviewWithIcons";
 import OrderFlow from "./OrderFlow";
-// Data for the Search Invers Landing Page
+
+import image from "./Images/hii.jpg";
+
+// Landing Page Data
 const searchInversPageData = {
   header: {
     logoText: "Search Invers",
     navLinks: ["Home", "Features", "Download", "Contact"],
-    icons: [Search, User, ShoppingCart], // Example icons for a marketplace header
+    icons: [Search, User, ShoppingCart],
   },
   hero: {
     title: "Delivering Convenience, Statewide!",
@@ -34,28 +36,28 @@ const searchInversPageData = {
       { text: "Download App", type: "primary" },
       { text: "Learn More", type: "secondary" },
     ],
-    bgImageUrl: image, // Placeholder for app banner
+    bgImageUrl: image,
   },
   features: [
     {
-      iconUrl: "https://placehold.co/64x64/ff7f50/fff?text=Vendor", // Placeholder for vendor icon
+      iconUrl: "https://placehold.co/64x64/ff7f50/fff?text=Vendor",
       title: "Multi-Vendor Marketplace",
       description:
         "Explore thousands of products from different vendors in one place.",
     },
     {
-      iconUrl: "https://placehold.co/64x64/ff7f50/fff?text=Delivery", // Placeholder for delivery icon
+      iconUrl: "https://placehold.co/64x64/ff7f50/fff?text=Delivery",
       title: "Live Order Tracking",
       description:
         "Track your delivery on Google Maps from vendor to your doorstep.",
     },
     {
-      iconUrl: "https://placehold.co/64x64/ff7f50/fff?text=Combo", // Placeholder for combo icon
+      iconUrl: "https://placehold.co/64x64/ff7f50/fff?text=Combo",
       title: "Smart Combo Deals",
       description: "Get discounts on curated combo products across categories.",
     },
     {
-      iconUrl: "https://placehold.co/64x64/ff7f50/fff?text=OTP", // Placeholder for OTP icon
+      iconUrl: "https://placehold.co/64x64/ff7f50/fff?text=OTP",
       title: "Secure OTP Login",
       description:
         "Login securely with your phone number and OTP verification.",
@@ -82,52 +84,27 @@ const searchInversPageData = {
 
 const SearchInversLandingPage = () => {
   return (
-    <div className="bg-[#fef7f0] text-[#1f1f1f] font-sans ">
-      {/* Top Navigation Bar */}
-      {/* <nav className="bg-[#1f1f1f] text-white py-4 px-6 flex justify-between items-center sticky top-0 z-50">
-        <div className="flex items-center space-x-6">
-          <div className="text-2xl font-bold text-[#ff7f50]">
-            {searchInversPageData.header.logoText}
-          </div>
-          <ul className="hidden md:flex space-x-6 text-gray-200 font-semibold">
-            {searchInversPageData.header.navLinks.map((link, index) => (
-              <li key={index}>
-                <a
-                  href={`#${link.toLowerCase().replace(/\s/g, "-")}`}
-                  className="hover:text-[#ff7f50] transition-colors"
-                >
-                  {link}
-                </a>
-              </li>
-            ))}
-          </ul>
-        </div>
-        <div className="flex items-center space-x-4">
-          {searchInversPageData.header.icons.map((Icon, index) => (
-            <Icon
-              key={index}
-              className="w-5 h-5 text-gray-200 cursor-pointer hover:text-[#ff7f50]"
-            />
-          ))}
-        </div>
-      </nav> */}
-
+    <div className="bg-[#fef7f0] text-[#1f1f1f] font-sans">
       {/* Hero Section */}
       <section
         id="home"
-        className="relative bg-cover bg-center bg-no-repeat h-150"
+        className="relative h-[100vh] bg-cover bg-center bg-no-repeat"
         style={{
           backgroundImage: `url(${searchInversPageData.hero.bgImageUrl})`,
         }}
       >
-        <div className="bg-black/40 p-13 sm:p-16 text-white flex flex-col items-start justify-center min-h-[109vh]">
-          <h1 className="text-4xl md:text-6xl font-bold mb-4">
+        {/* Overlay */}
+        <div className="absolute inset-0 bg-black/50" />
+
+        {/* Content */}
+        <div className="relative z-10 flex flex-col items-center sm:items-start justify-center h-full px-6 sm:px-12 text-white text-center sm:text-left">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 max-w-2xl">
             {searchInversPageData.hero.title}
           </h1>
-          <p className="text-lg md:text-xl max-w-2xl mb-6">
+          <p className="text-base sm:text-lg md:text-xl mb-6 max-w-xl">
             {searchInversPageData.hero.description}
           </p>
-          <div className="flex gap-4 flex-wrap">
+          <div className="flex gap-4 flex-wrap justify-center sm:justify-start">
             <button className="bg-[#ff7f50] text-white px-6 py-3 rounded-lg hover:bg-[#e9693c] transition-all">
               {searchInversPageData.hero.buttons[0].text}
             </button>
@@ -160,15 +137,19 @@ const SearchInversLandingPage = () => {
           ))}
         </div>
       </section>
+
+      {/* Project Overview */}
       <ProjectOverviewWithIcons />
+
+      {/* Order Flow Section */}
       <OrderFlow />
 
+      {/* Main Home Section */}
       <section>
-        {/* <Entry /> */}
         <MainHome />
       </section>
 
-      {/* Call to Action Section */}
+      {/* Call to Action */}
       <section id="download" className="bg-[#f5efe4] py-20 text-center px-6">
         <h2 className="text-4xl font-bold mb-4">
           {searchInversPageData.callToAction.title}
@@ -191,15 +172,9 @@ const SearchInversLandingPage = () => {
         </div>
       </section>
 
-      {/* Footer */}
+      {/* Footer Section */}
       <footer id="contact" className="bg-[#1f1f1f] text-gray-300 py-12 px-6">
         <div className="container mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
-          {/* <div className="text-center md:text-left">
-            <div className="text-2xl font-bold text-[#ff7f50] mb-2">
-              {searchInversPageData.header.logoText}
-            </div>
-            <p className="text-sm">{searchInversPageData.footer.copyright}</p>
-          </div> */}
           <div className="flex flex-col items-center md:items-start space-y-2">
             {searchInversPageData.footer.contactInfo.map((info, index) => (
               <p key={index} className="flex items-center text-sm">
@@ -220,6 +195,8 @@ const SearchInversLandingPage = () => {
           </div>
         </div>
       </footer>
+
+      {/* Optional Footer Component */}
       <Footer />
     </div>
   );

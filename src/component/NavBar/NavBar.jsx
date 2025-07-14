@@ -32,7 +32,7 @@ const NavBar = () => {
             {/* Logo */}
             <div className="flex items-center space-x-2">
               <Store
-                className={`w-8 h-8 transition-colors ${isScrolled ? 'text-purple-600' : 'text-white'
+                className={`w-8 h-8 transition-colors ${isScrolled ? 'text-black-600' : 'text-white'
                   }`}
               />
               <span
