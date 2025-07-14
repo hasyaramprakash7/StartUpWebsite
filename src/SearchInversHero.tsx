@@ -15,7 +15,7 @@ import Entry from "./component/Entry";
 import MainHome from "./component/MainHome";
 import Footer from "./component/Footer";
 
-import image from "./Images/c657919417616d02589aae40a4078d25.jpg";
+import image from "./Images/hii.jpg";
 import Contact from "./component/Contact";
 import ProjectOverviewWithIcons from "./ProjectOverviewWithIcons";
 import OrderFlow from "./OrderFlow";
