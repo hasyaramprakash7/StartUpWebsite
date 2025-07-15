@@ -7,7 +7,7 @@ import Welcome from '../Welcome';
 import Resources from '../Resources';
 import Contact from '../Contact';
 import Footer from '../Footer';
-import SearchInversHero from '../../SearchInversHero';
+import SearchInversHero from '../SearchInversHero';
 
 function Main() {
   return (

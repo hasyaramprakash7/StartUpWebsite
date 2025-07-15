@@ -11,14 +11,14 @@ import {
   Phone,
 } from "lucide-react";
 
-import Entry from "./component/Entry";
-import MainHome from "./component/MainHome";
-import Footer from "./component/Footer";
-import Contact from "./component/Contact";
+import Entry from "./Entry";
+import MainHome from "./MainHome";
+import Footer from "./Footer";
+import Contact from "./Contact";
 import ProjectOverviewWithIcons from "./ProjectOverviewWithIcons";
 import OrderFlow from "./OrderFlow";
 
-import image from "./Images/hii.jpg";
+import image from "../Images/hii.jpg";
 
 // Launch date: 3 months from now (adjust if needed)
 const LAUNCH_DATE = new Date("2025-10-14T00:00:00");
