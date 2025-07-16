@@ -11,8 +11,11 @@ API.interceptors.request.use((req) => {
     if (token) {
         req.headers.Authorization = `Bearer ${token}`;
     }
+
+    console.log('➡️ Request:', req.method?.toUpperCase(), req.url, req.data); // ✅ debug log
     return req;
 });
+
 
 
 export default API;
